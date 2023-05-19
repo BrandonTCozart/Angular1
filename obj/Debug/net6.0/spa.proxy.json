@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44428",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\bcozart\\VScodes\\HTMLwork\\branchsalesweb.sampleapps\\Angular\\AAM\\ClientApp\\",
+"MaxTimeoutInSeconds": "120"
+}
+}

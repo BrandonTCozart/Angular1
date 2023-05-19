@@ -1,0 +1,35 @@
+<app-loading-spinner *ngIf="loaderShow"></app-loading-spinner>
+
+
+<h2 mat-dialog-title>{{modalTitle}}</h2>
+
+
+<div id="addEditForm" [formGroup]="objectiveForm" *ngIf="!loaderShow">
+  <mat-form-field class="example-full-width">
+    <mat-label>Title:</mat-label>
+    <input matInput id="title-input" type="text" formControlName="titleControl" placeholder="Title" maxlength="50">
+    <mat-error *ngIf="objectiveForm.controls['titleControl'].invalid">{{titleErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description:</mat-label>
+    <textarea matInput id="description-input" type="text" formControlName="descriptionControl" placeholder="Description" maxlength="1000"></textarea>
+    <mat-error *ngIf="objectiveForm.controls['descriptionControl'].invalid">{{descriptionErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput id="complete-by-date-input" type="text" formControlName="doByDateControl" [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="objectiveForm.controls['doByDateControl'].invalid">{{dateErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-dialog-actions align="center">
+    <button id="cancel-button" mat-button mat-dialog-close>Cancel</button>
+    <button id="submit-button" mat-button (click)="submitObjective()" type="submit" [disabled]="!objectiveForm.valid">Submit</button>
+  </mat-dialog-actions>
+</div>
+
+

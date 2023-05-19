@@ -1,0 +1,139 @@
+table {
+  width: 100%;
+}
+
+th {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  font-size: 15px;
+  background: white;
+}
+
+#row-button-complete {
+  background-color: green;
+  border: solid;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+#row-button-delete {
+  background-color: red;
+  border: solid;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+#row-button-edit {
+  border: solid;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+#row-button-details {
+  border: solid;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+#row-button-complete, #row-button-delete, #row-button-edit, #row-button-details {
+  margin: 0px 2px;
+}
+
+#table-section {
+  padding-left: 1px;
+  padding-right: 1px;
+  width: 100%;
+}
+
+#table-header {
+  background-color: #0747a6;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+td:not(#description-column-sections) {
+  max-width: 75px;
+}
+
+#title-column-sections {
+  padding-left: 2px;
+}
+
+#description-column-sections {
+  max-width: 200px;
+}
+
+#date-column-sections {
+  padding-left: 2px;
+}
+
+td:not(#button-column-sections) {
+  max-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-collapse: separate;
+}
+
+th, td {
+  padding-left: 2px;
+}
+
+#button-column-sections {
+  max-width: 30px;
+  text-align: center;
+}
+
+#header-add-button {
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+
+#search-input-box {
+  margin: 10px 10px;
+  border-radius: 5px;
+  float: right;
+  width: 15vw;
+  height:36px;
+}
+
+#table-container {
+  max-height: 345px;
+  overflow-y: auto;
+  padding: 0px 0px;
+  width: 100%;
+}
+
+.row-color {
+  background-color: lightgreen;
+}
+
+#loader {
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+th.mat-header-cell:first-of-type {
+  padding-left: 0px;
+}
+
+th.mat-header-cell:last-of-type{
+  padding-right: 0px;
+}
+
+th.mat-header-cell {
+  padding-left: 0px;
+  text-align: center;
+}
+
+#no-objectives-message{
+    text-align:center;
+}

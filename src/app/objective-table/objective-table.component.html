@@ -1,0 +1,41 @@
+<app-loading-spinner *ngIf="loading"></app-loading-spinner>
+
+  <div id="table-section">
+    <div id="table-header">
+      <button mat-raised-button id="header-add-button" (click)="openDialog()">Add</button>
+      <input #searchInput [formControl]="searchBox" id="search-input-box" type="text" maxlength="40" placeholder="Search">
+    </div>
+    <div id="table-container">
+      <div *ngIf="Objectives.length != 0; else notFound">
+        <table mat-table [dataSource]="Objectives" class="mat-elevation-z8">
+          <ng-container matColumnDef="Title">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td class="{{element.completedDate ? 'row-color':''}}" id="title-column-sections" mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Complete_By_Date">
+            <th mat-header-cell *matHeaderCellDef> Complete By </th>
+            <td class="{{element.completedDate ? 'row-color':''}}" id="date-column-sections" mat-cell *matCellDef="let element"> {{element.completeByDate | date: 'dd/MM/yyyy'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td class="{{element.completedDate ? 'row-color':''}}" id="description-column-sections" *matCellDef="let element"> {{element.description}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td class="{{element.completedDate ? 'row-color':''}}" id="button-column-sections" *matCellDef="let element">
+              <button *ngIf="!element.completedDate" mat-raised-button-sm id="row-button-complete" (click)="completeObjective(element.id)">✔</button>
+              <button mat-raised-button-sm id="row-button-delete" (click)="openDeleteConfirmationModal(element.id)">✖</button>
+              <button *ngIf="!element.completedDate" mat-raised-button-sm id="row-button-edit" (click)="openDialog(element.id)">✎</button>
+              <button mat-raised-button-sm id="row-button-details" routerLink="/details/{{element.id}}">📜</button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        </div>
+      <ng-template #notFound>
+       <h3 id="no-objectives-message"> No Objectives Found </h3>
+      </ng-template>
+      </div>
+    </div>
+

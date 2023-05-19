@@ -1,0 +1,28 @@
+mat-list-item{
+    border-style:solid;
+    border-width:2px;
+}
+
+mat-list {
+  width: max-content;
+  margin: auto;
+}
+
+p{
+    margin-bottom:0px;
+    margin-top:10px;
+}
+
+#description-box {
+  width: 300px;
+  height: 100px;
+  max-height: 250px;
+}
+
+#loader {
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "4mtg5cEtPPb8/7Yn+BtueVy5RvFJ0U9GkQDiCp2kOMo=",
+  "Source": "AAM",
+  "BasePath": "_content/AAM",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AAM\\wwwroot",
+      "Source": "AAM",
+      "ContentRoot": "C:\\Users\\bcozart\\VScodes\\HTMLwork\\branchsalesweb.sampleapps\\Angular\\AAM\\wwwroot\\",
+      "BasePath": "_content/AAM",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\bcozart\\VScodes\\HTMLwork\\branchsalesweb.sampleapps\\Angular\\AAM\\wwwroot\\favicon.ico",
+      "SourceId": "AAM",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bcozart\\VScodes\\HTMLwork\\branchsalesweb.sampleapps\\Angular\\AAM\\wwwroot\\",
+      "BasePath": "_content/AAM",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

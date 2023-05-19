@@ -1,0 +1,33 @@
+<app-loading-spinner *ngIf="loaderShow"></app-loading-spinner>
+
+<div id="detail-container">
+  <div *ngIf="objective; else notFound">
+    <mat-list>
+      <h3>Details</h3>
+      <p>Title:</p>
+      <mat-list-item>{{objective.title}}</mat-list-item>
+
+      <div *ngIf="objective.description">
+        <p>Description:</p>
+        <textarea id="description-box" name="none" readonly>{{objective.description}}</textarea>
+      </div>
+      <p>Complete By:</p>
+      <mat-list-item>{{objective.completeByDate | date: 'M/d/yy h:mm a'}}</mat-list-item>
+
+      <div *ngIf="objective.completedDate">
+        <p>Date Completed:</p>
+        <mat-list-item>{{objective.completedDate | date: 'M/d/yy h:mm a'}}</mat-list-item>
+      </div>
+
+      <p>Date Created:</p>
+      <mat-list-item>{{objective.createdDate | date: 'M/d/yy h:mm a'}}</mat-list-item>
+
+      <p>Last Updated:</p>
+      <mat-list-item>{{objective.updatedDate | date: 'M/d/yy h:mm a'}}</mat-list-item>
+    </mat-list>
+  </div>
+
+  <ng-template #notFound>
+    <h1>Not Found</h1>
+  </ng-template>
+</div>

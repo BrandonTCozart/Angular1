@@ -1,0 +1,30 @@
+h2 {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#addEditForm {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+#loader {
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#description-input{
+    max-height:200px;
+}
+
+#cancel-button {
+  background-color: #faa1a1;
+}
+
+#submit-button {
+  background-color: #a6fdb1;
+}
+

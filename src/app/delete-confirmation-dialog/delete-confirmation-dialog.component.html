@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  Are you sure you want to delete "{{title}}" task?
+</div>
+<div mat-dialog-actions align="center">
+  <button id="no-button" mat-button (click)="closeDeleteDialog(false)" >No</button>
+  <button id="yes-button" mat-button (click)="closeDeleteDialog(true)" cdkFocusInitial>Yes</button>
+</div>
